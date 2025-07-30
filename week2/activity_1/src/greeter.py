@@ -4,7 +4,18 @@ def greet():
     print("Hello, World!")
 
 # create a calculator class and re-use this by instantiating it in the main.py
+class Calculator:
+    def add(self,x,y):
+        return x + y
 
+    def subtract(self,x,y):
+        return x - y
+
+    def divide(self,x,y):
+        return x / y
+
+    def multiply(self,x,y):
+        return x * y
 # So as not to contaminate your global namespace, it is good practice to use a main function.
 
 # so that we can reuse our code as both a module and
