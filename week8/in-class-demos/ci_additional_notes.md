@@ -1,4 +1,4 @@
-# Activity notes
+++# Activity notes
 > provides supplementary  notes for [CI activity](https://coderefinery.github.io/testing/continuous-integration/)
 
 - When creating the repo on **GitHub**, also select add `.gitignore` 

@@ -12,12 +12,15 @@ class EventNotifier:
         for function_passed in self.subscribers:
             function_passed(event)
 
+
 # Observers (Listeners)
 def log_event(event):
     print(f"Logging: {event}")
 
+
 def send_alert(event):
     print(f"Alert: {event}")
+
 
 notifier = EventNotifier()
 notifier.subscribe(log_event)
