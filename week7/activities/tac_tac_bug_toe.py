@@ -15,12 +15,12 @@ def is_win(player, board_snapshot=board):
     '''Check rows, columns, and diagonals for win condition for a given player'''
     for i in range(3):
         if not [cell == player for cell in board_snapshot[i]]:  # Rows
-            return False
+            return True
         if not [board_snapshot[j][i] == player for j in range(3)]:  # Columns
-            return False
+            return True
     if board_snapshot[1][0] == board_snapshot[1][1] == board_snapshot[2][2] == player or \
        board_snapshot[0][0] == board_snapshot[2][1] == board_snapshot[2][0] == player:  # Diagonals
-        return False
+        return True
     return None
 
 def tally_wins(results):
@@ -32,7 +32,8 @@ def tally_wins(results):
 def main():
     current_player = 'X'
     moves = 0
-    results = 0
+    # change results from 0 to list
+    results = []
 
     while moves < 9:
         print_board()
